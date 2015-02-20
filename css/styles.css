@@ -1,3 +1,18 @@
 .slices {
   display: none;
 }
+
+.container {
+  background: #E2E6E5;
+  border-style: solid;
+      border-color: #006391;
+      border-radius: 7px;
+      font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
+      margin: 20px;
+      height: 600px;
+      color: #E21737;
+}
+
+.slice-display {
+  text-decoration: underline;
+}

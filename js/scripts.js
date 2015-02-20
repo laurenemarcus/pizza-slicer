@@ -35,9 +35,12 @@ $(document).ready(function() {
     newPizza.size = size;
     newPizza.topping = topping;
 
+    $("#s").show();
     $(".slices").show();
-
     $(".slice-display").text(newPizza.slice());
+    if (newPizza.slice() < 2) {
+      $("#s").hide();
+    }
 
     $("input#size").val("");
   });
