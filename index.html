@@ -8,7 +8,31 @@
   <title>Pizza Slices</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container col-md-4">
+    <h2>Pizza Cuttas</h2>
+    <h4>We'll cutcha</h4>
+    <form id="pizza">
+      <fieldset>
+        <legend>Diameter</legend>
+          <div class="form-group">
+            <label for="diameter" class ="col-sm-2 control-label">Size</label>
+            <input type="text" class="form-control" id="diameter" pattern="\d*" placeholder="Enter the size in inches" required autofocus>
+          </div>
+        <legend>Toppings</legend>
+          <div class="form-group">
+            <label for="cheese">Cheese</label>
+            <input type="radio" name="topping" value="cheese" id="cheese" checked="checked">
+          <br>
+            <label for="pepperoni">Pepperoni</label>
+            <input type="radio" name="topping" value="pepperoni" id="pepperoni">
+      </fieldset>
+      <br>
+      <button class="btn btn-primary" type="submit">Slice it</button>
+    </form>
+    <br>
+    <div class="slices">
+      <h3>You have ordered <span class="slice-display"></span> slices</h3>
+    </div>
   </div>
 </body>
 </html>
