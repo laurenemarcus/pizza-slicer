@@ -1,6 +1,6 @@
 INTRODUCTION
 ------------
-
+The Pizza Slicer app will determine the number of slices in a pizza based on the pizza's diameter and toppings.
 
 REQUIREMENTS
 ------------
@@ -14,6 +14,8 @@ Open the following file in directory to launch the app:
 
 KNOWN BUGS
 ---------
+
+No known bugs. We make the biggest pizzas in town!
 
 
 AUTHOR
