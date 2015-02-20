@@ -15,5 +15,10 @@ describe("Pizza", function() {
       testPizza.size = 13;
       expect(testPizza.slice()).to.equal(8);
     });
+    it("will return an even number of slices if the diameter is greater than 16 inches", function() {
+      var testPizza = Object.create(Pizza);
+      testPizza.size = 23;
+      expect(testPizza.slice()).to.equal(10);
+    });
   });
 });
