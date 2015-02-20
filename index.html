@@ -5,7 +5,7 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-1.11.2.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Pizza Slices</title>
+  <title>PIZZA SLICER</title>
 </head>
 <body>
   <div class="container col-md-4">
@@ -17,7 +17,6 @@
       <fieldset>
         <legend>DIAMETER</legend>
           <div class="form-group">
-            <!-- <label for="size" class ="col-sm-2 control-label">SIZE</label> -->
             <input type="text" class="form-control" id="size" pattern="\d*" placeholder="WHOLE INCHES" required autofocus>
           </div>
         <hr>
@@ -29,12 +28,10 @@
             <label for="pepperoni">PEPPERONI</label>
             <input type="radio" name="topping" value="pepperoni" id="pepperoni">
       </fieldset>
-      <br>
       <hr>
       <button class="btn btn-primary" type="submit">SLICE ME</button>
     </form>
     <br>
-    <hr>
     <div class="slices">
       <h4>WE HAVE KNIFED YOU INTO <span class="slice-display"></span> SLICE<span id="s">S</span>, SUCKA.</h4>
     </div>

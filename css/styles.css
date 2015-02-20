@@ -5,14 +5,34 @@
 .container {
   background: #E2E6E5;
   border-style: solid;
-      border-color: #006391;
-      border-radius: 7px;
-      font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
-      margin: 20px;
-      height: 600px;
-      color: #E21737;
+  border-color: #006391;
+  border-radius: 7px;
+  border-width: 5px;
+  font-family: ‘Trebuchet MS’, Helvetica, sans-serif;
+  margin: 20px;
+  height: 570px;
+  color: #E21737;
+  font-weight: bold;
 }
 
 .slice-display {
   text-decoration: underline;
+}
+
+hr {
+  color: #006391;
+  background-color: #006391;
+  height: 2px;
+}
+
+h2 {
+font-weight: bold;
+}
+
+.form-control {
+  width: 200px;
+}
+
+button {
+  background-color:#006391;
 }
