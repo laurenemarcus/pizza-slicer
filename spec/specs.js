@@ -1,24 +1,34 @@
 describe("Pizza", function() {
   describe("slice", function() {
-    it("will return four slices if the diameter is greater than or equal to 4 and less than 8 inches", function() {
+    it("will return the number of slices when the diameter is divisible by 4", function() {
       var testPizza = Object.create(Pizza);
-      testPizza.size = 7;
-      expect(testPizza.slice()).to.equal(4);
-    });
-    it("will return 6 slices if the diameter is between 8 and 12 inches", function() {
-      var testPizza = Object.create(Pizza);
-      testPizza.size = 10;
+      testPizza.size = 12;
       expect(testPizza.slice()).to.equal(6);
     });
-    it("will return 8 slices if the diameter is between 12 and 16 inches", function() {
+    it("will return the number of slices when the diameter has a remainder of 1 when divided by 4", function() {
       var testPizza = Object.create(Pizza);
       testPizza.size = 13;
-      expect(testPizza.slice()).to.equal(8);
+      expect(testPizza.slice()).to.equal(6);
     });
-    it("will return an even number of slices if the diameter is greater than 16 inches", function() {
+    it("will return the number of slices when the diameter has a remainder of 2 when divided by 4", function() {
       var testPizza = Object.create(Pizza);
-      testPizza.size = 23;
-      expect(testPizza.slice()).to.equal(10);
+      testPizza.size = 14;
+      expect(testPizza.slice()).to.equal(6);
+    });
+    it("will return the number of slices when the diameter has a remainder of 3 when divided by 4", function() {
+      var testPizza = Object.create(Pizza);
+      testPizza.size = 15;
+      expect(testPizza.slice()).to.equal(6);
+    });
+    it("will return one slice if the pizza is smaller than four inches", function() {
+      var testPizza = Object.create(Pizza);
+      testPizza.size = 3;
+      expect(testPizza.slice()).to.equal(1);
+    });
+    it("will return two more slices if the topping is pepperoni", function() {
+      var testPizza = Object.create(Pizza);
+      testPizza.topping = "pepperoni";
+      expect(testPizza.slice()).to.equal(2);
     });
   });
 });

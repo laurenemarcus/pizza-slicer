@@ -1,21 +1,44 @@
 var Pizza = {
   pie: 0,
   slice: function() {
-    if ((4 <= this.size) && (this.size < 8)) {
-      this.pie += 4;
-    } else if ((8 <= this.size) && (this.size < 12)) {
-      this.pie += 6;
-    } else if ((12 <= this.size) && (this.size < 16)) {
-      this.pie += 8;
-    } else if (16 <= this.size) {
-      if (this.size % 2 === 0) {
-        this.pie += Math.floor((this.size)/2);
-      } else {
-      this.pie += (Math.floor((this.size)/2) - 1);
-      }
-    } else {
-      this.pie += 1;
+    if (this.size % 4 === 0) {
+      this.pie += this.size / 2;
+    } else if (this.size % 4 === 1) {
+      this.pie += (this.size - 1)/ 2;
+    } else if (this.size % 4 === 2) {
+      this.pie += (this.size - 2)/ 2;
+    } else if (this.size % 4 === 3) {
+      this.pie += (this.size - 3)/ 2;
     }
+
+    if (this.topping === "pepperoni") {
+      this.pie += 2;
+    }
+
+    if (this.size < 4) {
+      this.pie = 1;
+    }
+
     return this.pie;
   }
 };
+
+$(document).ready(function() {
+  $("form#pizza").submit(function(event) {
+    event.preventDefault();
+
+    var size =  parseInt($("input#size").val());
+    var topping = $("input[name=topping]:checked").val();
+
+    var newPizza = Object.create(Pizza);
+
+    newPizza.size = size;
+    newPizza.topping = topping;
+
+    $(".slices").show();
+
+    $(".slice-display").text(newPizza.slice());
+
+    $("input#size").val("");
+  });
+});
